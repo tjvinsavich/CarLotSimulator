@@ -18,9 +18,12 @@ namespace CarLotSimulator
             Console.WriteLine("Here we have our first car!\n");
             Car car1 = new Car();
             ourCars.CarList.Add(car1);
+            CarLot.numberOfCars++;
             
             car1.MakeEngineNoise(car1.EngineNoise);
             car1.MakeHonkNoise(car1.HonkNoise);
+
+            CarLot.displayCarCount(CarLot.numberOfCars);
 
             Console.WriteLine("\nHere we have our second car!\n");
             Car car2 = new Car()
@@ -33,16 +36,22 @@ namespace CarLotSimulator
                 IsDriveable = false
             };
             ourCars.CarList.Add(car2);
+            CarLot.numberOfCars++;
 
             car2.MakeEngineNoise(car2.EngineNoise);
             car2.MakeHonkNoise(car2.HonkNoise);
 
+            CarLot.displayCarCount(CarLot.numberOfCars);
+
             Console.WriteLine("\nHere we have our third car!\n");
             Car car3 = new Car(2750, "BeedZorp X", "Throwback", "*silence*", "EEEEEEEEEE", true);
             ourCars.CarList.Add(car3);
+            CarLot.numberOfCars++;
 
             car3.MakeEngineNoise(car3.EngineNoise);
             car3.MakeHonkNoise(car3.HonkNoise);
+
+            CarLot.displayCarCount(CarLot.numberOfCars);
 
 
             Console.WriteLine("\nOur list of cars reads as follows:\n");

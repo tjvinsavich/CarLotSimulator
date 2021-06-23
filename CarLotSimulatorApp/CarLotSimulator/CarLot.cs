@@ -13,5 +13,12 @@ namespace CarLotSimulator
 
         public List<Car> CarList { get; set; }
 
+        public static int numberOfCars = 0;
+
+        public static void displayCarCount (int numberOfCars)
+        {
+            Console.WriteLine($"\nWe now have {numberOfCars} car(s) in our lot!");
+        }
+
     }
 }
